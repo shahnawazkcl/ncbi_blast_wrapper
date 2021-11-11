@@ -2,7 +2,7 @@
 library(Biostrings)
 # Path to fasta that corresponding to each row of information csv file.
 # in our case "transcript_type_info.csv"
-path_to_domain_files = "to_blast_genes/"
+path_to_domain_files = "data/"
 
 ####=Functions required to run STEP 1 and 2 #####
 # splitting function
