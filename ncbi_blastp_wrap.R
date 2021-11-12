@@ -98,7 +98,7 @@ for(j in 1:nrow(infofile)){
   subject_id = unlist(strsplit(infofile$alt[j], "_"))[1]
   if (!dir.exists(infofile$name[j])){
     dir.create(infofile$name[j])
-    if(file.exists(paste0("to_blast_genes/", infofile$name[j], ".fasta"))){
+    if(file.exists(paste0(path_to_domain_files, infofile$name[j], ".fasta"))){
       splitseqpair(path_dfiles=path_to_domain_files ,info_file = infofile[j], query_id = query_id)
       sub_meta_df <- setNames(data.frame(matrix(ncol = 2)), c("seq", "seq_type"))
       save_metafile(path_dfiles= path_to_domain_files, info_file = infofile[j], query_id = query_id)
